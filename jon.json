@@ -1,0 +1,23 @@
+{
+  "containers":[
+    {
+      "name":"jon32-nodb",
+      "count":1,
+      "image":"jon32-nodb",
+      "publicports":[
+        {"internal":7080,"external":7080}
+      ],
+      "links":[
+        {"to":"rhq-psql"}
+      ]
+    },
+    {
+      "name":"rhq-psql",
+      "count":1,
+      "image":"vnguyen/rhq-psql",
+      "publicports":[
+        {"internal":5432}
+      ]
+    }
+  ]
+}
